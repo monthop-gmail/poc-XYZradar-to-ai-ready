@@ -30,6 +30,11 @@
 - 👉 [สรุปผลการรัน AI Demo (demo/demonstration_results.md)](./demo/demonstration_results.md)
 - 👉 [โค้ดสาธิตการใช้ AI (demo/demonstrate_ai.py)](./demo/demonstrate_ai.py)
 
+### 4. การเชื่อมต่อผ่านโปรโตคอล MCP (Model Context Protocol)
+เพื่อให้ AI Agent เข้าถึงข้อมูลได้โดยตรง เราได้เตรียม MCP Server ไว้ใน [pipeline/mcp_server.py](./pipeline/mcp_server.py) ซึ่งรองรับ:
+- **Claude Desktop / Claude Code**
+- **Antigravity / Cursor / IDE AI Agents**
+
 ---
 
 ## 🛠️ วิธีการใช้งาน (Getting Started)
@@ -38,6 +43,27 @@
 ```bash
 pip install pandas pyarrow requests
 ```
+
+### การตั้งค่า MCP Server (สำหรับ AI Agents)
+เพิ่มการตั้งค่าด้านล่างในโปรแกรมที่คุณใช้งาน (เช่น `claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "fuel-radar": {
+      "command": "python",
+      "args": ["C:/Users/pi/.gemini/antigravity/playground/vacant-supernova/pipeline/mcp_server.py"]
+    }
+  }
+}
+```
+
+---
+
+## 🏗️ โครงสร้างเครื่องมือใน MCP (Tools)
+เมือเชื่อมต่อแล้ว AI จะสามารถเรียกใช้เครื่องมือเหล่านี้ได้ทันที:
+1. `search_fuel_status(query)`: ค้นหาสถานะน้ำมันในพื้นที่ที่ระบุ
+2. `get_fuel_summary()`: ดูภาพรวมน้ำมันขาดช่วงทั่วประเทศ
 
 ### การรันระบบ (Pipeline)
 ```bash
