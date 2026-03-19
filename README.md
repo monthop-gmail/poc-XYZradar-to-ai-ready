@@ -74,7 +74,10 @@
 │   ├── ai_governance_framework.md    # กรอบธรรมาภิบาล AI & Data
 │   ├── how_to_add_mcp_tools.md      # คู่มือเพิ่ม MCP Tools + Prompt Templates
 │   ├── rag_explained.md            # RAG vs MCP อธิบายให้แยกออก
-│   └── data_ingestion_explained.md # Data Ingestion vs ETL vs Pipeline
+│   ├── data_ingestion_explained.md # Data Ingestion vs ETL vs Pipeline
+│   ├── glossary.md                # พจนานุกรมศัพท์ 50+ คำ
+│   ├── how_to_test_mcp_tools.md   # วิธีทดสอบ/Debug MCP Tools
+│   └── common_mistakes.md         # ข้อผิดพลาดที่มักเจอ + วิธีแก้
 ├── Dockerfile                 # Container image (Python 3.12)
 ├── docker-compose.yml         # Multi-service deployment
 └── requirements.txt           # Python dependencies
@@ -233,6 +236,9 @@ query: "กรุงเทพ"
 | [how_to_add_mcp_tools.md](./research/how_to_add_mcp_tools.md) | คู่มือเพิ่ม MCP Tools + Prompt Templates สำหรับใช้ AI ช่วยเขียนโค้ด |
 | [rag_explained.md](./research/rag_explained.md) | อธิบาย RAG vs MCP vs Keyword Search — โปรเจกต์นี้อยู่ตรงไหน |
 | [data_ingestion_explained.md](./research/data_ingestion_explained.md) | อธิบาย Data Ingestion vs ETL vs Pipeline — แต่ละคำหมายถึงอะไร |
+| [glossary.md](./research/glossary.md) | พจนานุกรมศัพท์ 50+ คำ — Data, AI, MCP, Docker, Governance |
+| [how_to_test_mcp_tools.md](./research/how_to_test_mcp_tools.md) | วิธีทดสอบและ Debug MCP Tools ก่อน Deploy |
+| [common_mistakes.md](./research/common_mistakes.md) | 18 ข้อผิดพลาดที่มักเจอ พร้อมวิธีแก้ไข |
 
 ---
 
