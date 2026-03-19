@@ -96,18 +96,18 @@ def run_stdio():
 app = FastAPI()
 queue = asyncio.Queue()
 
-@app.get("/sse")
+@app.get("/mcp")
 async def sse(request: Request):
     async def event_generator():
-        # MCP SSE requires sending the endpoint for messages first
-        yield {"data": json.dumps({"endpoint": "/messages"})}
+        # MCP SSE requires sending the endpoint for messages
+        yield {"data": json.dumps({"endpoint": "/mcp"})}
         while True:
             msg = await queue.get()
             yield {"data": json.dumps(msg)}
             queue.task_done()
     return EventSourceResponse(event_generator())
 
-@app.post("/messages")
+@app.post("/mcp")
 async def messages(request: Request):
     try:
         req = await request.json()
