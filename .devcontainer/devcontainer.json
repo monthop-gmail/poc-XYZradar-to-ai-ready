@@ -1,0 +1,25 @@
+{
+  "name": "Fuel Radar AI-Ready",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "mcp-server",
+  "workspaceFolder": "/app",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "MCP Server",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      }
+    }
+  },
+  "postStartCommand": "echo '✅ MCP Server running at http://localhost:3000/mcp'"
+}
