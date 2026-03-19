@@ -3,7 +3,7 @@
 [![Status](https://img.shields.io/badge/Status-AI--Ready-success)](https://thaipumpradar.com/)
 [![MCP](https://img.shields.io/badge/Protocol-MCP-blue)](https://modelcontextprotocol.io/)
 [![Docker](https://img.shields.io/badge/Docker-Ready-cyan)](https://www.docker.com/)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/monthop-gmail/poc-radar-to-ai-ready)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/monthop-gmail/poc-XYZradar-to-ai-ready)
 
 โปรเจกต์นี้เป็นตัวอย่างการยกระดับการเปิดเผยข้อมูลสาธารณะตามโมเดล **5+1 Star Open Data** โดยเปลี่ยนข้อมูลจากเว็บไซต์รายงานสถานะน้ำมันให้พร้อมสำหรับการใช้งานกับ AI/ML และ RAG (Retrieval-Augmented Generation)
 
@@ -60,7 +60,7 @@
 ## 🛠️ วิธีการติดตั้งและใช้งาน (Getting Started)
 
 ### GitHub Codespaces (แนะนำ - เริ่มใช้งานได้ทันที)
-1. กดปุ่ม **"Open in GitHub Codespaces"** ด้านบน หรือไปที่ [codespaces.new/monthop-gmail/poc-radar-to-ai-ready](https://codespaces.new/monthop-gmail/poc-radar-to-ai-ready)
+1. กดปุ่ม **"Open in GitHub Codespaces"** ด้านบน หรือไปที่ [codespaces.new/monthop-gmail/poc-XYZradar-to-ai-ready](https://codespaces.new/monthop-gmail/poc-XYZradar-to-ai-ready)
 2. รอสักครู่ให้ Codespace สร้างเสร็จ - MCP Server จะเริ่มทำงานอัตโนมัติ
 3. เข้าใช้งานได้ที่ `http://localhost:3000/mcp`
 
