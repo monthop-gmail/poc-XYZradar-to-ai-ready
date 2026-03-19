@@ -15,7 +15,8 @@
 ├── research/              # ผลการวิจัยและโมเดลข้อมูล
 │   ├── open_data_model.md
 │   ├── thaipumpradar_analysis_th.md
-│   └── ai_ready_audit.md  # เกณฑ์การตรวจสอบความพร้อม (Audit) 🆕
+│   ├── ai_ready_audit.md       # เกณฑ์การตรวจสอบความพร้อม (Audit)
+│   └── ai_governance_framework.md # กรอบธรรมาภิบาล (Governance) 🆕
 ├── pipeline/              # ส่วนจัดการข้อมูลและเซิร์ฟเวอร์
 │   ├── process_radar.py   # ดึงและคลีนข้อมูล (ETL)
 │   ├── datacard.md        # คำอธิบายชุดข้อมูล (Metadata)
@@ -40,7 +41,8 @@
 ### 1. การวิจัยและวิเคราะห์ (Research)
 - ศึกษาโมเดล [5+1 Star Open Data](./research/open_data_model.md)
 - วิเคราะห์โครงสร้างข้อมูล [Thai Pump Radar](./research/thaipumpradar_analysis_th.md)
-- ตรวจสอบความพร้อมด้วย [AI-Ready Audit Checklist](./research/ai_ready_audit.md) 🆕
+- ตรวจสอบความพร้อมด้วย [AI-Ready Audit Checklist](./research/ai_ready_audit.md)
+- ศึกษากรอบ [AI & Data Governance Framework](./research/ai_governance_framework.md) 🆕
 
 ### 2. กระบวนการเตรียมข้อมูล (AI-Ready Pipeline)
 - **ETL:** [pipeline/process_radar.py](./pipeline/process_radar.py) ทำการคลีนข้อมูลและตรวจสอบ Confidence Score
