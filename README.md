@@ -66,7 +66,7 @@ pip install pandas pyarrow requests
 {
   "mcpServers": {
     "fuel-radar-sse": {
-      "url": "http://localhost:8000/sse"
+      "url": "http://localhost:3000/sse"
     }
   }
 }
@@ -81,7 +81,7 @@ pip install pandas pyarrow requests
 # บิลด์และรันผ่าน Docker Compose
 docker-compose up -d --build
 ```
-ระบบจะเปิดบริการ MCP Server แบบ SSE ที่พอร์ต `8000` ทันที
+ระบบจะเปิดบริการ MCP Server แบบ SSE ที่พอร์ต `3000` ทันที
 
 ---
 

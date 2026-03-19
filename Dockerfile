@@ -14,4 +14,4 @@ RUN mkdir -p data
 
 # Default command: Run MCP server in SSE mode
 # You can override this to run process_radar.py or use stdio
-CMD ["python", "pipeline/mcp_server.py", "--transport", "sse", "--port", "8000"]
+CMD ["python", "pipeline/mcp_server.py", "--transport", "sse", "--port", "3000"]
