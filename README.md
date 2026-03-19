@@ -60,12 +60,12 @@ pip install pandas pyarrow requests
 }
 ```
 
-#### **รูปแบบที่ 2: SSE (ใช้งานผ่าน HTTP / Docker / Codespaces)**
-หากรันผ่าน Docker (ดูหัวข้อด้านล่าง) คุณสามารถเชื่อมต่อผ่าน HTTP ได้:
+#### **รูปแบบที่ 2: Modern Streamable HTTP (สำหรับ Docker / Codespaces)**
+นี่คือแนวทางที่แนะนำสำหรับปี 2025 โดยรันผ่าน Docker ที่ใช้ Python 3.12 และ `FastMCP` SDK:
 ```json
 {
   "mcpServers": {
-    "fuel-radar-sse": {
+    "fuel-radar-modern": {
       "url": "http://localhost:3000/mcp"
     }
   }
@@ -74,14 +74,14 @@ pip install pandas pyarrow requests
 
 ---
 
-## 🐳 การใช้งานผ่าน Docker (แนะนำสำหรับ GitHub Codespaces)
+## 🐳 การใช้งานผ่าน Docker (Modern Implementation)
 
-หากต้องการรันในรูปแบบ Container เพื่อความสะดวกในทีมงาน:
+หากต้องการรันในรูปแบบ Modern Streamable HTTP:
 ```bash
-# บิลด์และรันผ่าน Docker Compose
+# บิลด์และรันโครงการ
 docker-compose up -d --build
 ```
-ระบบจะเปิดบริการ MCP Server แบบ SSE ที่พอร์ต `3000` (Endpoint: `/mcp`) ทันที
+ระบบจะรันเซิร์ฟเวอร์โดยใช้ **FastMCP** ซึ่งเป็น SDK ล่าสุด ให้บริการผ่านพอร์ต `3000` (Endpoint: `/mcp`)
 
 ---
 
