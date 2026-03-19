@@ -105,6 +105,33 @@ docker-compose up -d --build
 
 MCP Server พร้อมใช้งานที่ `http://localhost:3000/mcp`
 
+### การตั้งค่า MCP ในแอป AI (Claude Desktop, Cursor, Windsurf, etc.)
+
+เมื่อ MCP Server ทำงานแล้ว (วิธีที่ 1 หรือ 2) ให้ตั้งค่าในแอป AI ดังนี้:
+
+**Claude Desktop** (`claude_desktop_config.json`):
+```json
+{
+  "mcpServers": {
+    "fuel-radar": {
+      "url": "http://localhost:3000/mcp"
+    }
+  }
+}
+```
+
+**Cursor** (Settings → MCP Servers → Add):
+```
+URL: http://localhost:3000/mcp
+```
+
+**Claude Code** (CLI):
+```bash
+claude mcp add fuel-radar http://localhost:3000/mcp
+```
+
+> หลังจากเพิ่มแล้ว AI จะสามารถเรียกใช้ `search_fuel_status()` และ `get_fuel_summary()` ได้ทันที
+
 ### วิธีที่ 3: Stdio (สำหรับ Claude Desktop / AI Client)
 
 ```bash
