@@ -71,7 +71,8 @@
 │   ├── open_data_model.md     # โมเดล 5+1 Star Open Data
 │   ├── thaipumpradar_analysis_th.md  # วิเคราะห์แหล่งข้อมูล
 │   ├── ai_ready_audit.md      # เกณฑ์ตรวจสอบ AI-Ready Checklist
-│   └── ai_governance_framework.md    # กรอบธรรมาภิบาล AI & Data
+│   ├── ai_governance_framework.md    # กรอบธรรมาภิบาล AI & Data
+│   └── how_to_add_mcp_tools.md      # คู่มือเพิ่ม MCP Tools + Prompt Templates
 ├── Dockerfile                 # Container image (Python 3.12)
 ├── docker-compose.yml         # Multi-service deployment
 └── requirements.txt           # Python dependencies
@@ -200,6 +201,8 @@ query: "กรุงเทพ"
     - ขอนแก่น: 2 reports
 ```
 
+> **อยากเพิ่ม MCP Tool?** ดูคู่มือ [How to Add MCP Tools](./research/how_to_add_mcp_tools.md) พร้อม Prompt Templates สำหรับให้ AI ช่วยเขียนโค้ด
+
 ---
 
 ## Data Pipeline (ETL)
@@ -225,6 +228,7 @@ query: "กรุงเทพ"
 | [thaipumpradar_analysis_th.md](./research/thaipumpradar_analysis_th.md) | วิเคราะห์โครงสร้างข้อมูลจาก API และแผนทำ AI-Ready |
 | [ai_ready_audit.md](./research/ai_ready_audit.md) | Checklist ตรวจสอบว่าข้อมูลผ่านเกณฑ์ AI-Ready หรือไม่ |
 | [ai_governance_framework.md](./research/ai_governance_framework.md) | กรอบธรรมาภิบาล AI & Data ตามมาตรฐาน PDPA และ DGS |
+| [how_to_add_mcp_tools.md](./research/how_to_add_mcp_tools.md) | คู่มือเพิ่ม MCP Tools + Prompt Templates สำหรับใช้ AI ช่วยเขียนโค้ด |
 
 ---
 
