@@ -72,7 +72,8 @@
 │   ├── thaipumpradar_analysis_th.md  # วิเคราะห์แหล่งข้อมูล
 │   ├── ai_ready_audit.md      # เกณฑ์ตรวจสอบ AI-Ready Checklist
 │   ├── ai_governance_framework.md    # กรอบธรรมาภิบาล AI & Data
-│   └── how_to_add_mcp_tools.md      # คู่มือเพิ่ม MCP Tools + Prompt Templates
+│   ├── how_to_add_mcp_tools.md      # คู่มือเพิ่ม MCP Tools + Prompt Templates
+│   └── rag_explained.md            # RAG vs MCP อธิบายให้แยกออก
 ├── Dockerfile                 # Container image (Python 3.12)
 ├── docker-compose.yml         # Multi-service deployment
 └── requirements.txt           # Python dependencies
@@ -229,6 +230,7 @@ query: "กรุงเทพ"
 | [ai_ready_audit.md](./research/ai_ready_audit.md) | Checklist ตรวจสอบว่าข้อมูลผ่านเกณฑ์ AI-Ready หรือไม่ |
 | [ai_governance_framework.md](./research/ai_governance_framework.md) | กรอบธรรมาภิบาล AI & Data ตามมาตรฐาน PDPA และ DGS |
 | [how_to_add_mcp_tools.md](./research/how_to_add_mcp_tools.md) | คู่มือเพิ่ม MCP Tools + Prompt Templates สำหรับใช้ AI ช่วยเขียนโค้ด |
+| [rag_explained.md](./research/rag_explained.md) | อธิบาย RAG vs MCP vs Keyword Search — โปรเจกต์นี้อยู่ตรงไหน |
 
 ---
 
