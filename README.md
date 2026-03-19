@@ -45,18 +45,43 @@ pip install pandas pyarrow requests
 ```
 
 ### การตั้งค่า MCP Server (สำหรับ AI Agents)
-เพิ่มการตั้งค่าด้านล่างในโปรแกรมที่คุณใช้งาน (เช่น `claude_desktop_config.json`):
+มี 2 รูปแบบให้เลือกใช้:
 
+#### **รูปแบบที่ 1: Stdio (ใช้งานในเครื่อง)**
+เพิ่มการตั้งค่าในโปรแกรม (เช่น `claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
-    "fuel-radar": {
+    "fuel-radar-stdio": {
       "command": "python",
-      "args": ["C:/Users/pi/.gemini/antigravity/playground/vacant-supernova/pipeline/mcp_server.py"]
+      "args": ["C:/Users/pi/.gemini/antigravity/playground/vacant-supernova/pipeline/mcp_server.py", "--transport", "stdio"]
     }
   }
 }
 ```
+
+#### **รูปแบบที่ 2: SSE (ใช้งานผ่าน HTTP / Docker / Codespaces)**
+หากรันผ่าน Docker (ดูหัวข้อด้านล่าง) คุณสามารถเชื่อมต่อผ่าน HTTP ได้:
+```json
+{
+  "mcpServers": {
+    "fuel-radar-sse": {
+      "url": "http://localhost:8000/sse"
+    }
+  }
+}
+```
+
+---
+
+## 🐳 การใช้งานผ่าน Docker (แนะนำสำหรับ GitHub Codespaces)
+
+หากต้องการรันในรูปแบบ Container เพื่อความสะดวกในทีมงาน:
+```bash
+# บิลด์และรันผ่าน Docker Compose
+docker-compose up -d --build
+```
+ระบบจะเปิดบริการ MCP Server แบบ SSE ที่พอร์ต `8000` ทันที
 
 ---
 
