@@ -90,7 +90,11 @@
 
 1. กดปุ่ม **"Open in GitHub Codespaces"** ด้านบน
 2. รอให้ Codespace สร้างเสร็จ — MCP Server จะเริ่มทำงานอัตโนมัติ
-3. เข้าใช้งานได้ที่ `http://localhost:3000/mcp`
+3. ดู URL ของ MCP Server ที่แท็บ **Ports** (port 3000) จะได้ URL ในรูปแบบ:
+   ```
+   https://<codespace-name>-3000.app.github.dev/mcp
+   ```
+4. ตั้ง visibility ของ port เป็น **Public** เพื่อให้ AI Client ภายนอกเชื่อมต่อได้
 
 ### วิธีที่ 2: Docker Compose (แนะนำสำหรับรันในเครื่อง)
 
@@ -107,14 +111,19 @@ MCP Server พร้อมใช้งานที่ `http://localhost:3000/mcp
 
 ### การตั้งค่า MCP ในแอป AI (Claude Desktop, Cursor, Windsurf, etc.)
 
-เมื่อ MCP Server ทำงานแล้ว (วิธีที่ 1 หรือ 2) ให้ตั้งค่าในแอป AI ดังนี้:
+เมื่อ MCP Server ทำงานแล้ว ให้ตั้งค่า URL ตามวิธีที่ใช้:
+
+| วิธีการรัน | MCP URL |
+|-----------|---------|
+| Codespaces | `https://<codespace-name>-3000.app.github.dev/mcp` |
+| Docker Compose (ในเครื่อง) | `http://localhost:3000/mcp` |
 
 **Claude Desktop** (`claude_desktop_config.json`):
 ```json
 {
   "mcpServers": {
     "fuel-radar": {
-      "url": "http://localhost:3000/mcp"
+      "url": "https://<codespace-name>-3000.app.github.dev/mcp"
     }
   }
 }
@@ -122,14 +131,16 @@ MCP Server พร้อมใช้งานที่ `http://localhost:3000/mcp
 
 **Cursor** (Settings → MCP Servers → Add):
 ```
-URL: http://localhost:3000/mcp
+URL: https://<codespace-name>-3000.app.github.dev/mcp
 ```
 
 **Claude Code** (CLI):
 ```bash
-claude mcp add fuel-radar http://localhost:3000/mcp
+claude mcp add fuel-radar https://<codespace-name>-3000.app.github.dev/mcp
 ```
 
+> แทนที่ `<codespace-name>` ด้วยชื่อ Codespace ของคุณ หรือใช้ `http://localhost:3000/mcp` หากรันในเครื่อง
+>
 > หลังจากเพิ่มแล้ว AI จะสามารถเรียกใช้ `search_fuel_status()` และ `get_fuel_summary()` ได้ทันที
 
 ### วิธีที่ 3: Stdio (สำหรับ Claude Desktop / AI Client)
